@@ -20,7 +20,7 @@ pipeline {
                  aquaMicroscanner imageName: 'alpine:latest', notCompleted: 'exit 1', onDisallowed: 'fail'
               }
          }         
-         stage('Upload to AWS') {
+         stage('Uploading to AWS') {
               steps {
                   withAWS(region:'us-east-2',credentials:'aws-static') {
                   sh 'echo "Uploading content with AWS creds"'
